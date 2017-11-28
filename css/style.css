@@ -1,18 +1,96 @@
-@import "import-styles.css";
+/* NOTES */
+
+/* A CLASS IN GENEREL
+Class selectors let us target elements based on their class attribute.
+A class can target more than one element.
+*/
+
+/* AN ID IN GENEREL
+ID selector lets us assign a unique ID to an element. IDs are unique to the page, 
+so an element can only have one ID and a page can only have one element with the same ID name.
+*/
+
+/* DESCENDANT SELECTORS
+We can combine selectors to create descendant selectors that target elements that are descendants of an element. 
+This makes our selectors more specific.
+*/
+
+
 
 body {
-	text-align: center;
+	color: #878787;
+	margin: 0;
 }
 
-h1 {
-	font-size: 72px;
-	color: #fff	;
-}
-
-header {
+.main-header {
 	background-color: orange;
 }
 
-p {
-	font-size: 20px;
+.title {
+	color: white;
+	font-size: 26px;
 }
+
+/* Descendant selector start */
+ol li {
+	background-color: tomato;
+	color: white;
+	margin-bottom: 5px;
+}
+/* Descendant selector end */
+
+
+h1 {
+	font-size: 90px;
+	color: #fff;
+}
+
+h2 {
+	font-size: 53px;
+}
+
+h3 {
+	font-size: 20px;
+	color: #48525c;
+}
+
+
+/* Classes */
+.primary-content {
+	text-align: center;
+}
+
+.t-border {
+	border-top: 2px solid lightgrey;
+}
+
+
+/* ID'a */
+#main-footer {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	border-bottom: solid 10px orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
