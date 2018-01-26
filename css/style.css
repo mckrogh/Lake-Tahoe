@@ -15,38 +15,46 @@ We can combine selectors to create descendant selectors that target elements tha
 This makes our selectors more specific.
 */
 
+/* PSEUDO CLASSES
+Pseudo-classes are similar to classes, but they’re not explicitly defined in an element's class attribute. Unlike type, 
+ID and class selectors, pseudo-classes can target elements dynamically based on user interaction, 
+an element’s state, and more.
+Think of a pseudo-class as a keyword we add to a selector to style a special state of an element.
+*/
 
+
+/* LENGHTH UNITS
+PIXEL - When we use pixel units, the size we define will always remain the same and will not scale, 
+regardless of the browser window and size of the screen.
+
+/* PERCENTAGES - We can define number values more fluidly with percentage units. Percentages, by nature, are always relative to something else. 
+When we use a percentage unit in CSS, the percentage value is measured relative to a parent element's length.
+*/
+
+/* EM 
+Relative length units are relative to other length values. The most commonly used relative unit is the em unit. 
+The em is known as a font-relative unit because it's calculated based on a parent element's font size.
+*/
+
+
+/* Type Selectors ------------------ */
 
 body {
 	color: #878787;
 	margin: 0;
 }
 
-.main-header {
-	background-color: orange;
-}
-
-.title {
-	color: white;
-	font-size: 26px;
-}
-
-/* Descendant selector start */
-ol li {
-	background-color: tomato;
-	color: white;
-	margin-bottom: 5px;
-}
-/* Descendant selector end */
-
-
 h1 {
-	font-size: 90px;
+	font-size: 5.625em; /* 90px / 16px */
 	color: #fff;
+	text-transform: uppercase;
+	font-weight: normal;
 }
 
 h2 {
 	font-size: 53px;
+	text-decoration: underline;
+	font-weight: normal;
 }
 
 h3 {
@@ -55,21 +63,58 @@ h3 {
 }
 
 
-/* Classes */
-.primary-content {
-	text-align: center;
+/* Pseudo-classes ------------------ */
+
+a:link {
+  color: rgb(255, 169, 73);
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: rgba(255, 169, 73, .4);
+}
+
+a:active {
+  color: lightcoral;
+}
+
+
+/* Class Selectors ----------------- */
+
+.main-header {
+	background-color: #ffa949;
+}
+
+.title {
+	color: white;
+	font-size: 1.625em; /*26px / 16px */ 
+}
+
+.primary-content, 
+.secondary-content {
+	width: 60%;
+}
+
+.primary-content, 
+.main-header {
+  text-align: center;
 }
 
 .t-border {
-	border-top: 2px solid lightgrey;
+  border-top: 2px solid lightgrey; /* Top border styles */
 }
 
 
-/* ID'a */
+/* ID Selectors -------------------- */
+
 #main-footer {
 	padding-top: 60px;
 	padding-bottom: 60px;
-	border-bottom: solid 10px orange;
+	border-bottom: solid 10px #ffa949;
 }
 
 
