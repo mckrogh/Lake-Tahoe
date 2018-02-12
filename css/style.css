@@ -62,7 +62,19 @@ Margins affect the area outside a box. We commonly use margin properties to crea
 With the display property, we can override the default display settings of an element. In this video, we'll cover the three most common types of display values.
 */
 
+/*WIDTH & HEIGHT PROPERTIES
+By default, an element's width and height are as wide or as tall as the content it holds. But we're able to set our own dimensions with the width and height properties.
+*/
+
+/*BOX-SIZING
+With the box-sizing property, we can alter the way the browser calculates an element's total width and height. We're also able to set the maximum width of an element with the max-width property.
+*/
+
 /* Base Styles -------------------- */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   color: #878787;
@@ -92,6 +104,11 @@ h3 {
   margin-bottom: 1.7em; /* 34px */
 }
 
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
 /* Pseudo-classes ------------------ */
 
 a:link {
@@ -115,6 +132,8 @@ a:active {
 
 .main-header {
   background-color: #ffa949;
+  padding-top: 170px;
+  height: 850px;
 }
 
 .title {
@@ -166,8 +185,11 @@ a:active {
 
 .primary-content, 
 .secondary-content {
-  width: 60%;
+  width: 75%;
+  padding-left: 50px;
+  padding-right: 50px;
   margin: auto;
+  max-width: 900px;
 }
 
 .wildlife {
@@ -176,6 +198,10 @@ a:active {
   padding: 18% 24%;
   border-top: 10px solid #ffa949;
   margin: 105px 0 60px;
+}
+
+.arrow {
+  width: 50px;
 }
 
 
