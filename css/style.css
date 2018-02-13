@@ -70,6 +70,21 @@ By default, an element's width and height are as wide or as tall as the content 
 With the box-sizing property, we can alter the way the browser calculates an element's total width and height. We're also able to set the maximum width of an element with the max-width property.
 */
 
+/*BACKGROUNDS
+background-image
+Sets one or several background images for an element.
+
+background-size
+Sets the size of a background image.
+
+background-repeat
+Controls whether or not the image is tiled and how it gets tiled both vertically and horizontally. The value repeat-y repeats the image vertically, while repeat-x repeats the background image horizontally.
+*/
+
+/*FLOATS
+Floats are one of the most commonly used methods for laying out a page with CSS. When an element is floated, the element is taken out of the normal flow of the page and placed along the left or right side of its container.
+*/
+
 /* Base Styles -------------------- */
 
 * {
@@ -134,6 +149,10 @@ a:active {
   background-color: #ffa949;
   padding-top: 170px;
   height: 850px;
+  background-image: url("../img/mountains.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .title {
@@ -203,6 +222,32 @@ a:active {
 .arrow {
   width: 50px;
 }
+
+/* Floated Columns ------------------ */
+
+.resorts,
+.tips {
+  width: 46.5%;
+}
+
+.tips {
+  float: right;
+}
+
+.resorts {
+  float: left;
+}
+
+
+/* Float Clearfix ------------------ */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 
 
 
